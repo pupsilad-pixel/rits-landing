@@ -180,16 +180,14 @@
   if (!modal) return;
 
   var modalBox = $('.modal__box', modal);
-  var subjectInput = $('#form-subject');
   var lastFocused = null;
 
-  var openModal = function (subject) {
+  var openModal = function () {
     lastFocused = document.activeElement;
-    subjectInput.value = subject || 'Заявка с сайта';
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
-    var first = $('input[name="name"]', modal);
-    if (first) first.focus();
+    var closeButton = $('.modal__close', modal);
+    if (closeButton) closeButton.focus();
   };
 
   var closeModal = function () {
@@ -199,7 +197,7 @@
   };
 
   $$('.js-modal-open').forEach(function (btn) {
-    btn.addEventListener('click', function () { openModal(btn.dataset.subject); });
+    btn.addEventListener('click', openModal);
   });
 
   $$('[data-close]', modal).forEach(function (el) {
@@ -212,7 +210,7 @@
     if (e.key !== 'Tab') return;
 
     // ловушка фокуса внутри модалки
-    var focusable = $$('button, input, textarea, a[href]', modalBox)
+    var focusable = $$('button, iframe, a[href]', modalBox)
       .filter(function (el) { return !el.disabled && el.offsetParent !== null; });
     if (!focusable.length) return;
 
@@ -222,79 +220,4 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 
-  /* ---------- Маска телефона ---------- */
-  var phone = $('input[name="phone"]', modal);
-
-  phone.addEventListener('input', function () {
-    var digits = phone.value.replace(/\D/g, '');
-    if (digits[0] === '8') digits = '7' + digits.slice(1);
-    if (digits[0] !== '7') digits = '7' + digits;
-    digits = digits.slice(0, 11);
-
-    var out = '+7';
-    if (digits.length > 1) out += ' (' + digits.slice(1, 4);
-    if (digits.length >= 5) out += ') ' + digits.slice(4, 7);
-    if (digits.length >= 8) out += '-' + digits.slice(7, 9);
-    if (digits.length >= 10) out += '-' + digits.slice(9, 11);
-    phone.value = out;
-  });
-
-  phone.addEventListener('focus', function () {
-    if (!phone.value) phone.value = '+7 (';
-  });
-
-  /* ---------- Отправка формы ---------- */
-  var form = $('#lead-form');
-  var msg = $('#form-msg');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    msg.className = 'form__msg';
-    msg.textContent = '';
-
-    var name = form.elements.name;
-    var tel = form.elements.phone;
-    var agree = form.elements.agree;
-    var bad = null;
-
-    [name, tel].forEach(function (f) { f.classList.remove('is-error'); });
-
-    if (!name.value.trim()) { name.classList.add('is-error'); bad = bad || name; }
-    if (tel.value.replace(/\D/g, '').length < 11) { tel.classList.add('is-error'); bad = bad || tel; }
-
-    if (bad) {
-      msg.className = 'form__msg is-err';
-      msg.textContent = 'Заполните имя и телефон.';
-      bad.focus();
-      return;
-    }
-    if (!agree.checked) {
-      msg.className = 'form__msg is-err';
-      msg.textContent = 'Нужно согласие на обработку персональных данных.';
-      return;
-    }
-
-    // TODO: заменить на реальную отправку (fetch на бэкенд / CRM)
-    var payload = {
-      subject: form.elements.subject.value,
-      name: name.value.trim(),
-      phone: tel.value,
-      company: form.elements.company.value.trim(),
-      comment: form.elements.comment.value.trim()
-    };
-    console.log('Заявка RITS:', payload);
-
-    var submit = $('button[type="submit"]', form);
-    submit.disabled = true;
-    msg.className = 'form__msg is-ok';
-    msg.textContent = 'Заявка отправлена. Свяжемся с вами в течение 15 минут.';
-
-    setTimeout(function () {
-      form.reset();
-      submit.disabled = false;
-      closeModal();
-      msg.textContent = '';
-      msg.className = 'form__msg';
-    }, 2200);
-  });
 })();
