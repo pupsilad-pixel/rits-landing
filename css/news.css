@@ -1,5 +1,6 @@
 /* Общие стили каталога и отдельных страниц новостей RITS. */
 .news-page{min-height:100vh;background:var(--bg)}
+.news-feature-page{padding-bottom:clamp(56px,8vw,100px)}
 .subheader{position:sticky;top:0;z-index:20;background:rgba(236,238,244,.92);border-bottom:1px solid rgba(208,210,223,.7);backdrop-filter:blur(14px)}
 .subheader__inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .subheader__logo img{display:block;width:138px;height:auto}

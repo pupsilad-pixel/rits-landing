@@ -6,34 +6,101 @@
   <title>Новости RITS — IT-поддержка, автоматизация и продукты</title>
   <meta name="description" content="Новости RITS: AI-мониторинг, автоматизация IT-поддержки, корпоративные продукты и события компании.">
   <link rel="icon" href="../assets/favicon/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css"><link rel="stylesheet" href="../css/news.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/news.css">
 </head>
 <body class="news-page">
-  <header class="subheader"><div class="container subheader__inner">
-    <a class="subheader__logo" href="../"><img src="../assets/logos/rits/full-logo_color.png" alt="RITS"></a>
-    <nav class="subheader__nav" aria-label="Навигация"><a href="../">Главная</a><a href="../#contacts">Контакты</a><a class="btn btn--primary btn--sm" href="../#contacts">Оставить заявку</a></nav>
-  </div></header>
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.9v2.6a1.8 1.8 0 0 1-2 1.8 17.6 17.6 0 0 1-7.7-2.7 17.3 17.3 0 0 1-5.3-5.3A17.6 17.6 0 0 1 3.3 5.6 1.8 1.8 0 0 1 5.1 3.7h2.6a1.8 1.8 0 0 1 1.8 1.5c.1.9.3 1.7.6 2.5a1.8 1.8 0 0 1-.4 1.9L8.6 10.7a14 14 0 0 0 5 5l1.1-1.1a1.8 1.8 0 0 1 1.9-.4c.8.3 1.6.5 2.5.6a1.8 1.8 0 0 1 1.5 1.8z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10.2" r="2.6"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M21.6 4.3L18.4 19.5c-.24 1.07-.88 1.33-1.78.83l-4.92-3.63-2.37 2.28c-.26.26-.48.48-.99.48l.35-5.02 9.13-8.25c.4-.35-.09-.55-.62-.2L6.9 12.9 2.05 11.4c-1.05-.33-1.07-1.05.22-1.56L20.24 3.1c.88-.32 1.65.2 1.36 1.2z"/></symbol>
+    <symbol id="i-max" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 16.5V7.8l7 5.4 7-5.4v8.7"/><path d="M5 7.8h3.1L12 11l3.9-3.2H19"/><rect x="3" y="4" width="18" height="16" rx="6"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.5A9.4 9.4 0 0 0 3.9 16.7L2.6 21.5l4.95-1.3A9.4 9.4 0 1 0 12 2.5zm0 1.9a7.5 7.5 0 0 1 6.3 11.6l-.3.5.7 2.5-2.6-.68-.45.26A7.5 7.5 0 1 1 12 4.4zm-3.3 3.6c-.2 0-.5.06-.75.33-.26.27-1 .95-1 2.3s1.02 2.67 1.16 2.86c.14.19 1.98 3.15 4.88 4.28 2.4.94 2.9.76 3.42.71.52-.05 1.68-.68 1.92-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.33-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.17.19-.34.21-.62.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.6-2-.17-.29-.02-.44.12-.59.13-.13.29-.34.43-.5.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.57-.88-2.14-.23-.56-.46-.48-.64-.49h-.5z"/></symbol>
+  </svg>
+  <header class="subheader">
+    <div class="container subheader__inner">
+      <a class="subheader__logo" href="../"><img src="../assets/logos/rits/full-logo_color.png" alt="RITS"></a>
+      <nav class="subheader__nav" aria-label="Навигация"><a href="../">Главная</a><a href="../#contacts">Контакты</a><a class="btn btn--primary btn--sm" href="../#contacts">Оставить заявку</a></nav>
+    </div>
+  </header>
   <main>
-    <section class="news-hero"><div class="container"><span class="news-hero__eyebrow">RITS / Медиа</span><h1>Новости и разработки RITS</h1><p>Рассказываем о продуктах, автоматизации, технологиях и событиях команды.</p></div></section>
-    <section class="container news-catalog" aria-label="Все новости">
-
-      <!-- НОВУЮ КАРТОЧКУ КОПИРОВАТЬ ОТСЮДА и вставлять первой в списке. -->
-      <a class="news-preview" href="rits-agent.html">
-        <div class="news-preview__image"><img src="../assets/news/rits-agent.svg" alt="RITS Agent" loading="eager"></div>
-        <div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-08-01">1 августа 2025</time><span>Продукт</span></div><h2>RITS Agent — новый уровень автоматизации IT-поддержки</h2><p>Интеллектуальный агент помогает контролировать инфраструктуру, находить отклонения и ускорять решение инцидентов.</p><span class="news-preview__more">Читать новость →</span></div>
-      </a>
-      <!-- КОНЕЦ КАРТОЧКИ. Замените ссылку, картинку, дату, название и описание. -->
-
-      <a class="news-preview" href="sysadmin-day.html"><div class="news-preview__image"><img src="../assets/news/sysadmin-day.svg" alt="День системного администратора" loading="lazy"></div><div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-07-25">25 июля 2025</time><span>Компания</span></div><h2>С Днём системного администратора!</h2><p>О специалистах, благодаря которым инфраструктура остаётся стабильной, безопасной и незаметно надёжной.</p><span class="news-preview__more">Читать новость →</span></div></a>
-      <a class="news-preview" href="bpmn-new-services.html"><div class="news-preview__image"><img src="../assets/news/bpmn-services.svg" alt="Новые сервисы BPMN" loading="lazy"></div><div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-07-10">10 июля 2025</time><span>Автоматизация</span></div><h2>Новые сервисы в экосистеме BPMN RITS</h2><p>Расширяем набор автоматизированных сценариев для повседневных процессов IT-поддержки.</p><span class="news-preview__more">Читать новость →</span></div></a>
-      <a class="news-preview" href="rits-alert.html"><div class="news-preview__image"><img src="../assets/news/rits-alert.svg" alt="RITS Alert" loading="lazy"></div><div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-06-20">20 июня 2025</time><span>Продукт</span></div><h2>RITS Alert: важные события без информационного шума</h2><p>Система уведомляет ответственных специалистов о критичных инцидентах и сохраняет контекст события.</p><span class="news-preview__more">Читать новость →</span></div></a>
-      <a class="news-preview" href="mongostress.html"><div class="news-preview__image"><img src="../assets/news/mongostress.svg" alt="Диагностика MongoDB с mongostress" loading="lazy"></div><div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-06-01">1 июня 2025</time><span>AI RITS</span></div><h2>Будущее IT-поддержки уже здесь</h2><p>Mongostress анализирует MongoDB, находит узкие места и формирует практические рекомендации для инженеров.</p><span class="news-preview__more">Читать новость →</span></div></a>
-      <a class="news-preview" href="corporate-messenger.html"><div class="news-preview__image"><img src="../assets/news/corporate-messenger.svg" alt="Корпоративный мессенджер RITS" loading="lazy"></div><div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-05-20">20 мая 2025</time><span>Продукт</span></div><h2>Корпоративное общение стало удобнее и безопаснее</h2><p>Мессенджер объединяет общение, задачи, обращения клиентов и интеллектуального помощника.</p><span class="news-preview__more">Читать новость →</span></div></a>
-      <a class="news-preview" href="bpmn-constructor.html"><div class="news-preview__image"><img src="../assets/news/bpmn-constructor.svg" alt="BPMN-конструктор RITS" loading="lazy"></div><div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-04-15">15 апреля 2025</time><span>Автоматизация</span></div><h2>Собственный BPMN-конструктор RITS</h2><p>Наглядные схемы помогают быстрее собирать сценарии и автоматизировать повторяющиеся операции.</p><span class="news-preview__more">Читать новость →</span></div></a>
-      <a class="news-preview" href="startup-rits.html"><div class="news-preview__image"><img src="../assets/news/startup-rits.svg" alt="Проект Startup RITS" loading="lazy"></div><div class="news-preview__body"><div class="news-preview__meta"><time datetime="2025-03-10">10 марта 2025</time><span>Компания</span></div><h2>Проект «Startup RITS»</h2><p>Проект получил статус стартапа ОЭЗ «Иннополис» и продолжает развивать технологии IT-обслуживания.</p><span class="news-preview__more">Читать новость →</span></div></a>
+    <section class="news-hero">
+      <div class="container"><span class="news-hero__eyebrow">RITS / Медиа</span><h1>Новости и разработки RITS</h1><p>Рассказываем о продуктах, автоматизации, технологиях и событиях команды.</p></div>
+    </section>
+    <section class="container news-feature-list news-feature-page" aria-label="Все новости">
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>Продукт</span><time datetime="2025-08-01">1 августа 2025</time></div><h3>Мы протестировали RITS Agent — и вот что выяснили</h3><p>Мы сравнили работу агента мониторинга с загрузкой системы и обнаружили интересный эффект. Пик потребления ресурсов составил всего 10%. Даже при максимальной загрузке оборудования агент не перегружает систему — он работает мягко и незаметно.</p><a class="btn btn--news" href="rits-agent.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="rits-agent.html" aria-label="Подробнее о тестировании RITS Agent"><img src="../assets/news/rits-agent.svg" alt="Мониторинг серверной инфраструктуры с RITS Agent"></a>
+      </article>
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>Команда</span><time datetime="2025-07-25">25 июля 2025</time></div><h3>С Днём системного администратора!</h3><p>Системный администратор — словно тайный агент. Вы всегда остаётесь в тени, но как только возникает проблема, мы понимаем, что без вас как без рук. Спасибо за профессионализм, терпение и умение соединять несоединимое.</p><a class="btn btn--news" href="sysadmin-day.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="sysadmin-day.html" aria-label="Подробнее о Дне системного администратора"><img src="../assets/news/sysadmin-day.svg" alt="День системного администратора" loading="lazy"></a>
+      </article>
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>Автоматизация</span><time datetime="2025-07-10">10 июля 2025</time></div><h3>RITS дополнил BPMN-автоматизацию новыми сервисами</h3><p>В корпоративную платформу добавлены календарь с синхронизацией, кадровый документооборот с ЭЦП, аудио- и видеозвонки. Новые модули интегрированы с собственным BPMN-конструктором RITS.</p><a class="btn btn--news" href="bpmn-new-services.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="bpmn-new-services.html" aria-label="Подробнее о новых сервисах BPMN"><img src="../assets/news/bpmn-services.svg" alt="BPMN-автоматизация RITS" loading="lazy"></a>
+      </article>
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>Продукт</span><time datetime="2025-06-20">20 июня 2025</time></div><h3>RITS Alert — интеллектуальная система быстрого реагирования</h3><p>Приложение автоматизирует приём и обработку аварийных сигналов. RITS Alert работает с промышленными системами мониторинга, офисными приложениями, мессенджерами и нестандартными источниками событий.</p><a class="btn btn--news" href="rits-alert.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="rits-alert.html" aria-label="Подробнее о RITS Alert"><img src="../assets/news/rits-alert.svg" alt="Система быстрого реагирования RITS Alert" loading="lazy"></a>
+      </article>
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>AI RITS</span><time datetime="2025-06-01">1 июня 2025</time></div><h3>Будущее IT-поддержки уже здесь</h3><p>Инструмент mongostress — один из микросервисов экосистемы AI-Ассистента RITS. Он диагностирует MongoDB: анализирует логи, находит узкие места и формирует рекомендации по индексам.</p><a class="btn btn--news" href="mongostress.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="mongostress.html" aria-label="Подробнее о mongostress"><img src="../assets/news/mongostress.svg" alt="Диагностика MongoDB с mongostress" loading="lazy"></a>
+      </article>
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>Продукт</span><time datetime="2025-05-20">20 мая 2025</time></div><h3>Корпоративное общение стало удобнее и безопаснее</h3><p>Корпоративный мессенджер RITS объединяет общение, задачи и интеллектуальную поддержку. Обращения клиентов превращаются в тикеты, а группы и ветки обсуждений сохраняют коммуникацию структурированной.</p><a class="btn btn--news" href="corporate-messenger.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="corporate-messenger.html" aria-label="Подробнее о корпоративном мессенджере RITS"><img src="../assets/news/corporate-messenger.svg" alt="Корпоративный мессенджер RITS" loading="lazy"></a>
+      </article>
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>Автоматизация</span><time datetime="2025-04-15">15 апреля 2025</time></div><h3>Собственный BPMN-конструктор RITS</h3><p>Инженеры RITS собирают рабочие сценарии в виде наглядных схем и применяют их быстрее. Поиск документов, подготовка отчётов и проверка данных занимают меньше времени, а результат остаётся точным.</p><a class="btn btn--news" href="bpmn-constructor.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="bpmn-constructor.html" aria-label="Подробнее о BPMN-конструкторе RITS"><img src="../assets/news/bpmn-constructor.svg" alt="BPMN-конструктор RITS" loading="lazy"></a>
+      </article>
+      <article class="news-feature">
+        <div class="news-feature__content"><div class="news-feature__meta"><span>Компания</span><time datetime="2025-03-10">10 марта 2025</time></div><h3>Проект «Startup RITS»</h3><p>Проект получил статус стартапа в особой экономической зоне «Иннополис» и продолжает совершенствовать технологии IT-обслуживания, мониторинга и автоматизации для бизнеса.</p><a class="btn btn--news" href="startup-rits.html">Подробнее →</a></div>
+        <a class="news-feature__image" href="startup-rits.html" aria-label="Подробнее о проекте Startup RITS"><img src="../assets/news/startup-rits.svg" alt="Проект Startup RITS" loading="lazy"></a>
+      </article>
     </section>
   </main>
-  <footer class="news-footer"><div class="container news-footer__inner"><span>© 2019–2026 RITS</span><a href="../#contacts">Связаться с нами</a></div></footer>
-</body></html>
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="../"><img class="logo__image" src="../assets/logos/rits/full-logo_white-with-color.png" alt="RITS" width="730" height="354"></a>
+        <p>IT-аутсорсинг с искусственным интеллектом. Обслуживаем бизнес в 50+ городах России.</p>
+        <ul class="socials">
+          <li><a href="https://t.me/IT_RITS" aria-label="Telegram" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-tg"/></svg></a></li>
+          <li><a href="https://max.ru/u/f9LHodD0cOJnREf6ChIRdW90Ahy0Kqbh48H106a8Lt39tmoMSB9a2D2kJhI" aria-label="MAX" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-max"/></svg></a></li>
+          <li><a href="https://wa.me/79625797422" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-wa"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer__nav" aria-label="Услуги">
+        <h4>Услуги</h4>
+        <a href="../#services">Администрирование серверов</a><a href="../#services">Настройка компьютеров</a><a href="../#services">Поддержка сетей</a><a href="../#services">Информационная безопасность</a><a href="../#services">Аудит инфраструктуры</a><a href="../#services">Перенос IT-инфраструктуры</a>
+      </nav>
+      <nav class="footer__nav" aria-label="Продукты">
+        <h4>Продукты</h4>
+        <a href="../#ai">AI RITS</a><a href="../#alert">RITS Alert</a><a href="../#messenger">RITS Messenger</a><a href="../#bpmn">RITS BPMN</a><a href="../#cases">Кейсы</a><a href="./">Новости</a>
+      </nav>
+      <div class="footer__contacts">
+        <h4>Контакты</h4>
+        <a class="fcontact" href="tel:+78432532554"><svg class="ico"><use href="#i-phone"/></svg>+7 (843) 253-25-54</a>
+        <a class="fcontact" href="mailto:sale@ritsgroup.ru"><svg class="ico"><use href="#i-mail"/></svg>sale@ritsgroup.ru</a>
+        <span class="fcontact"><svg class="ico"><use href="#i-pin"/></svg>г. Иннополис, ул. Университетская, д. 5, Республика Татарстан</span>
+        <a class="btn btn--primary btn--sm" href="../#contacts">Оставить заявку</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2019–2026 RITS. Все права защищены.</span>
+      <nav aria-label="Правовая информация">
+        <a href="../assets/documents/user-agreement.pdf" target="_blank" rel="noopener">Пользовательское соглашение</a>
+        <a href="../assets/documents/privacy-policy.pdf" target="_blank" rel="noopener">Политика обработки персональных данных</a>
+        <a href="../assets/documents/privacy-policy.pdf" target="_blank" rel="noopener">Cookie и аналитика</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
