@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=20260813-6">
+<link rel="stylesheet" href="css/styles.css?v=20260813-8">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon/favicon.png">
 </head>
@@ -105,6 +105,32 @@
     </div>
 
     <div class="hero-map__network">
+    <svg class="hero-connectors" viewBox="0 0 200 400" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="hero-line-left" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#aebdca" stop-opacity=".72"/>
+          <stop offset="1" stop-color="#5db4ee" stop-opacity=".78"/>
+        </linearGradient>
+        <linearGradient id="hero-line-right" x1="1" y1="0" x2="0" y2="0">
+          <stop offset="0" stop-color="#aebdca" stop-opacity=".72"/>
+          <stop offset="1" stop-color="#5db4ee" stop-opacity=".78"/>
+        </linearGradient>
+      </defs>
+      <g class="hero-connectors__side hero-connectors__side--left">
+        <path d="M0 58 C68 58 52 132 100 200"/>
+        <path d="M0 129 C60 129 62 171 100 200"/>
+        <path class="hero-connectors__middle" d="M0 200 L100 200"/>
+        <path d="M0 271 C60 271 62 229 100 200"/>
+        <path d="M0 342 C68 342 52 268 100 200"/>
+      </g>
+      <g class="hero-connectors__side hero-connectors__side--right">
+        <path d="M200 58 C132 58 148 132 100 200"/>
+        <path d="M200 129 C140 129 138 171 100 200"/>
+        <path class="hero-connectors__middle" d="M200 200 L100 200"/>
+        <path d="M200 271 C140 271 138 229 100 200"/>
+        <path d="M200 342 C132 342 148 268 100 200"/>
+      </g>
+    </svg>
     <div class="hero-map__support reveal">
       <h2>Сопровождение</h2>
       <div class="solution-node"><span><svg class="ico"><use href="#i-cloud"/></svg></span><div><b>Серверы</b><small>Linux / Windows / 1С</small></div></div>
